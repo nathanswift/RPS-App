@@ -1,0 +1,185 @@
+body {
+    margin-left: 22.5%;
+    width: 50%;
+    height: auto;
+    font-family: 'Permanent Marker', cursive;
+    color: white;
+    background-color: black;
+    text-shadow: 2px 2px #77231d;
+}
+
+.init {
+    margin-top: 30%;
+    font-size: 1.4em;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+#title {
+    display: flex;
+    justify-content: center;
+}
+
+#rock {
+    animation: rockDrop 2s linear;
+}
+
+#paper {
+    animation: paperDrop 2s linear;
+}
+
+#scissors {
+    animation: scissorsDrop 2s linear;
+}
+
+@keyframes rockDrop {
+    0% {
+        opacity: 0;
+        transform: translateY(-300px);
+    }
+    100% {
+        opacity: 1;
+        transform: translate(0)
+    }
+}
+
+@keyframes paperDrop {
+    0% {
+        opacity: 0;
+        transform: translateY(-400px);
+    }
+    100% {
+        opacity: 1;
+        transform: translate(0)
+    }
+}
+
+@keyframes scissorsDrop {
+    0% {
+        opacity: 0;
+        transform: translateY(-500px);
+    }
+    100% {
+        opacity: 1;
+        transform: translate(0)
+    }
+}
+
+.instruct {
+    display: flex;
+    justify-content: center;
+    animation: pulse2 2s infinite;
+}
+
+#start-btn {
+    display: flex;
+    width: 100px;
+    height: 70px;
+    animation: pulse 2s infinite;
+    color: white;
+    font-family: 'Permanent Marker', cursive;
+    font-size: .8em;
+    background-color: #77231d;
+    border: #77231d;
+    border-radius: 45%;
+    justify-content: center;
+    box-shadow: -10px 10px 15px #252424;
+}
+
+#walkthrough {
+    opacity: 0;
+    display: flex;
+    justify-content: center;
+    margin-top: 25px;
+    animation: timeOut 7s;
+}
+
+
+img {
+    width: 100px;
+    padding: 50px;
+    margin: 40px 40px;
+    height: auto;
+    display: inline-flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    border-radius: 50%;
+    box-shadow: 0px 10px 30px #888888;
+    animation: pulse 2s infinite;
+}
+
+#rps-image3 {
+    margin-left: 30%;
+}
+
+#result {
+    display: hidden;
+}
+
+#comp-results {
+    color: white;
+    font-size: 1em;
+    display: flex;
+    justify-content: flex-end;
+}
+
+
+h4 {
+    color: #f1f442;
+    display: block;
+}
+
+@keyframes timeOut {
+    0% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+ 
+ @keyframes pulse {
+    0% {
+     transform: scale(1, 1);
+    }
+ 
+    50% {
+     transform: scale(1.05, 1.05);
+    }
+ 
+    100% {
+    transform: scale(1, 1);
+    }
+ }
+ @keyframes pulse2 {
+    0% {
+     transform: scale(1, 1);
+    }
+ 
+    50% {
+     transform: scale(1, 1.1);
+    }
+ 
+    100% {
+    transform: scale(1, 1);
+    }
+ }
+
+ #result {
+     animation: result 10.5s; 
+ }
+
+ @keyframes result {
+     0% {
+         opacity: 0;
+     }
+
+     99% {
+         opacity: 0;
+     }
+     100% {
+         opacity: 1;
+     }
+ }
